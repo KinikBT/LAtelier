@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Living Atelier | Architectural Bath & Kitchen Sanctuary</title>
+  <meta name="description" content="Official distributor in Cambodia for Hansgrohe, Duravit, Geberit, Fima Carlo Frattini, Franke, Elkay, and Apaiser. Bespoke architectural bath and kitchen gallery." />
+
+  <!-- Google Fonts: Cormorant Garamond (Editorial Serif) & Plus Jakarta Sans (Clean Architectural Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Tailwind Configuration for Palette & Typography -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            jade: {
+              DEFAULT: '#2C4235',
+              light: '#3E5647',
+              dark: '#1E2E25',
+            },
+            limestone: {
+              DEFAULT: '#F7F4EE',
+              warm: '#EAE3D5',
+              deep: '#DFD6C5',
+            },
+            charcoal: {
+              DEFAULT: '#1C1E1D',
+              muted: '#4E5250',
+            },
+            champagne: {
+              DEFAULT: '#B8995E',
+              light: '#CEB480',
+              dark: '#967A44',
+            },
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          },
+          letterSpacing: {
+            widest: '0.22em',
+            ultra: '0.3em',
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Minimal Custom Styles for Subtle Architectural Transitions & Scrollbar -->
+  <style>
+    body {
+      background-color: #F7F4EE;
+      color: #1C1E1D;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Editorial reveal animation */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Subtle hairline gold border utility */
+    .border-gold-hairline {
+      border-color: rgba(184, 153, 94, 0.35);
+    }
+
+    /* Custom subtle scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F7F4EE;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #B8995E;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-jade selection:text-limestone">
+
+  <!-- ===================================================================== -->
+  <!-- 1. MINIMALIST ARCHITECTURAL NAVIGATION BAR (ALWAYS-COLLAPSED MENU)    -->
+  <!-- ===================================================================== -->
+  <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-500 bg-limestone/90 backdrop-blur-md border-b border-gold-hairline">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14">
+      <div class="flex items-center justify-between h-20 sm:h-24">
+        
+        <!-- Brand Logo -->
+        <a href="#" class="group flex flex-col focus:outline-none">
+          <span class="font-serif text-2xl sm:text-[28px] tracking-[0.18em] text-jade font-medium leading-none transition-colors group-hover:text-champagne">
+            LIVING ATELIER
+          </span>
+          <span class="text-[9px] sm:text-[10px] tracking-ultra uppercase text-charcoal-muted mt-1.5 font-medium">
+            Official Brand Sanctuary
+          </span>
+        </a>
+
+        <!-- Always-Collapsed Architectural Menu Trigger (All Viewports) -->
+        <div class="flex items-center">
+          <button id="menu-drawer-btn" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="architectural-drawer"
+            class="group inline-flex items-center space-x-3.5 px-5 py-3 rounded-sm border border-gold-hairline bg-limestone/60 text-jade hover:border-champagne hover:bg-jade hover:text-limestone transition-all duration-300 focus:outline-none">
+            <span class="text-[11px] tracking-widest uppercase font-medium">Menu</span>
+            <svg class="w-5 h-5 text-champagne group-hover:text-limestone transition-colors" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 8.5h16.5M3.75 15.5h16.5" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Full-Height Architectural Slide-Over Menu Drawer & Backdrop -->
+  <div id="drawer-backdrop" class="fixed inset-0 z-50 hidden bg-charcoal/60 backdrop-blur-xs opacity-0 transition-opacity duration-500" aria-hidden="true"></div>
+
+  <aside id="architectural-drawer" aria-label="Site Navigation"
+    class="fixed top-0 right-0 bottom-0 z-50 w-full max-w-md bg-jade-dark text-limestone border-l border-champagne/35 shadow-2xl transform translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col justify-between p-8 sm:p-12 overflow-y-auto">
+    
+    <!-- Drawer Header -->
+    <div class="flex items-center justify-between pb-8 border-b border-champagne/25">
+      <div>
+        <span class="font-serif text-xl tracking-[0.2em] text-limestone block">LIVING ATELIER</span>
+        <span class="text-[9px] tracking-ultra uppercase text-champagne block mt-1">Phnom Penh &bull; Cambodia</span>
+      </div>
+      <button id="close-drawer-btn" aria-label="Close Navigation Menu"
+        class="inline-flex items-center space-x-2 px-3.5 py-2 rounded-sm border border-champagne/40 text-limestone/85 hover:text-champagne hover:border-champagne transition-colors text-[10px] tracking-widest uppercase">
+        <span>Close</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Editorial Navigation Links -->
+    <nav class="my-auto py-10 space-y-6">
+      <a href="#heritage" class="drawer-link group flex items-baseline justify-between py-2 border-b border-champagne/15 hover:border-champagne transition-colors">
+        <span class="font-serif text-3xl sm:text-4xl font-normal text-limestone group-hover:text-champagne-light transition-colors">Heritage</span>
+        <span class="text-[10px] tracking-ultra uppercase text-champagne">01</span>
+      </a>
+      <a href="#brands" class="drawer-link group flex items-baseline justify-between py-2 border-b border-champagne/15 hover:border-champagne transition-colors">
+        <span class="font-serif text-3xl sm:text-4xl font-normal text-limestone group-hover:text-champagne-light transition-colors">Curated Brands</span>
+        <span class="text-[10px] tracking-ultra uppercase text-champagne">02</span>
+      </a>
+      <a href="#pillars" class="drawer-link group flex items-baseline justify-between py-2 border-b border-champagne/15 hover:border-champagne transition-colors">
+        <span class="font-serif text-3xl sm:text-4xl font-normal text-limestone group-hover:text-champagne-light transition-colors">Provenance &amp; Craft</span>
+        <span class="text-[10px] tracking-ultra uppercase text-champagne">03</span>
+      </a>
+      <a href="#showroom" class="drawer-link group flex items-baseline justify-between py-2 border-b border-champagne/15 hover:border-champagne transition-colors">
+        <span class="font-serif text-3xl sm:text-4xl font-normal text-limestone group-hover:text-champagne-light transition-colors">The Showroom</span>
+        <span class="text-[10px] tracking-ultra uppercase text-champagne">04</span>
+      </a>
+    </nav>
+
+    <!-- Drawer Footer & Private Consultation CTA -->
+    <div class="pt-6 border-t border-champagne/25 space-y-6">
+      <a href="#consultation" class="drawer-link block w-full text-center px-6 py-4 rounded-sm bg-champagne text-jade-dark hover:bg-champagne-light transition-colors text-xs tracking-widest uppercase font-semibold">
+        Private Consultation
+      </a>
+      <div class="text-xs text-limestone/70 font-light space-y-1">
+        <p class="text-[10px] tracking-widest uppercase text-champagne">Phnom Penh Gallery</p>
+        <p>Corner of Preah Norodom Blvd &amp; St 306, BKK1</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===================================================================== -->
+  <!-- 2. EDITORIAL HERO SECTION                                             -->
+  <!-- ===================================================================== -->
+  <section class="relative pt-28 sm:pt-36 pb-20 lg:pb-28 bg-limestone overflow-hidden">
+    <!-- Subtle Architectural Monogram Watermark SVG -->
+    <div class="pointer-events-none absolute -right-24 top-24 opacity-[0.045] text-jade">
+      <svg width="540" height="540" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="0.6">
+        <circle cx="100" cy="100" r="95" />
+        <circle cx="100" cy="100" r="72" />
+        <line x1="100" y1="5" x2="100" y2="195" />
+        <line x1="5" y1="100" x2="195" y2="100" />
+        <rect x="48" y="48" width="104" height="104" />
+      </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left Editorial Narrative (7 Columns) -->
+        <div class="lg:col-span-7 space-y-8 reveal-on-scroll">
+          <div class="inline-flex items-center space-x-3">
+            <span class="h-[1px] w-10 bg-champagne"></span>
+            <span class="text-[11px] tracking-ultra uppercase text-champagne font-semibold">
+              Phnom Penh &bull; Official Distributor
+            </span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-[62px] text-jade font-normal leading-[1.12] tracking-tight">
+            Architectural Sanctuary, <br class="hidden sm:inline" />
+            <span class="italic font-normal text-charcoal">Curated with Provenance.</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-charcoal-muted font-light leading-relaxed max-w-2xl">
+            Genuine European, American, and Australian bath and kitchen engineering for Cambodia’s most distinguished residences and hospitality landmarks—backed by <strong class="font-medium text-jade">Living Atelier’s</strong> multi-decade regional specification expertise.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+            <a href="#consultation" class="inline-flex justify-center items-center px-8 py-4 rounded-sm bg-jade text-limestone hover:bg-jade-light transition-all duration-300 text-xs tracking-widest uppercase font-medium shadow-sm">
+              Book a Private Showroom Viewing
+            </a>
+            <a href="#brands" class="inline-flex justify-center items-center px-8 py-4 rounded-sm border border-gold-hairline bg-limestone-warm/60 text-charcoal hover:border-champagne hover:text-jade transition-all duration-300 text-xs tracking-widest uppercase font-medium">
+              Explore Official Brands
+            </a>
+          </div>
+
+          <!-- Subtle Architectural Metadata Strip -->
+          <div class="pt-8 border-t border-gold-hairline grid grid-cols-3 gap-6 max-w-xl">
+            <div>
+              <p class="font-serif text-2xl sm:text-3xl text-jade">100%</p>
+              <p class="text-[11px] uppercase tracking-widest text-charcoal-muted mt-1">Official Distributor</p>
+            </div>
+            <div>
+              <p class="font-serif text-2xl sm:text-3xl text-jade">7 Houses</p>
+              <p class="text-[11px] uppercase tracking-widest text-charcoal-muted mt-1">Global Design Icons</p>
+            </div>
+            <div>
+              <p class="font-serif text-2xl sm:text-3xl text-jade">30+ Yrs</p>
+              <p class="text-[11px] uppercase tracking-widest text-charcoal-muted mt-1">Regional Heritage</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Visual Composition: Tropical Modernist Bath Sanctuary (5 Columns) -->
+        <div class="lg:col-span-5 reveal-on-scroll">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <!-- Decorative Jade & Gold Architectural Frame -->
+            <div class="absolute -inset-3 sm:-inset-4 border border-champagne/45 rounded-sm pointer-events-none translate-x-2 translate-y-2"></div>
+            
+            <div class="relative rounded-sm overflow-hidden bg-jade aspect-[4/5] shadow-xl">
+              <img 
+                src="image_generation_content/18171720819854210995" 
+                alt="Apaiser-inspired sculptural matte reclaimed marble freestanding bathtub sanctuary with warm textured limestone walls, brushed champagne bronze floor-mounted mixer, natural timber louvers, and dappled tropical foliage" 
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=85';"
+                class="w-full h-full object-cover object-center transition-transform duration-1000 hover:scale-105"
+              />
+              <!-- Subtle Gradient & Architectural Caption -->
+              <div class="absolute inset-0 bg-gradient-to-t from-jade-dark/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-6 left-6 right-6 text-limestone">
+                <p class="text-[10px] tracking-ultra uppercase text-champagne-light mb-1">Materiality &amp; Water &bull; Apaiser Bathware</p>
+                <p class="font-serif text-xl italic leading-snug">
+                  “Where hand-finished reclaimed marble, warm limestone, and brushed champagne bronze converge.”
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 3. BRAND PROVENANCE & OFFICIAL DISTRIBUTOR GUARANTEE STRIP            -->
+  <!-- ===================================================================== -->
+  <section id="heritage" class="bg-jade text-limestone py-16 sm:py-20 border-y border-champagne/30">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center reveal-on-scroll">
+        
+        <div class="lg:col-span-5 space-y-3">
+          <div class="inline-flex items-center space-x-2.5">
+            <svg class="w-4 h-4 text-champagne" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+            </svg>
+            <span class="text-[11px] tracking-ultra uppercase text-champagne font-medium">
+              Authorized Provenance Guarantee
+            </span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl font-normal leading-tight text-limestone">
+            Direct from the Factory. <br />
+            <span class="italic text-champagne-light">Backed by Regional Rigor.</span>
+          </h2>
+        </div>
+
+        <div class="lg:col-span-7 lg:pl-8 lg:border-l border-champagne/25 space-y-4">
+          <p class="text-sm sm:text-base text-limestone/85 font-light leading-relaxed">
+            In luxury architecture, authenticity is non-negotiable. Living Atelier operates exclusively through <strong class="font-medium text-white">official distributorship channels</strong>—eliminating grey-market risk and ensuring every valve, concealed cistern, ceramic basin, and stone vessel carries full manufacturer warranty and genuine spare-parts continuity in Cambodia.
+          </p>
+          <p class="text-xs sm:text-sm text-champagne-light/90 font-light">
+            Guided by <strong class="font-medium">over three decades of regional architectural specification mastery</strong>—a trusted technical partner behind landmark private residences, five-star hotels, and civic developments across Southeast Asia.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 4. CURATED OFFICIAL BRAND PORTFOLIO (INTERACTIVE SHOWCASE)            -->
+  <!-- ===================================================================== -->
+  <!-- 5. THE LIVING ATELIER ADVANTAGE (3-COLUMN ARCHITECTURAL PILLARS)      -->
+  <!-- ===================================================================== -->
+  <section id="pillars" class="py-24 sm:py-32 bg-limestone-warm border-y border-gold-hairline">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14">
+      
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-6 reveal-on-scroll">
+        <div class="space-y-3 max-w-2xl">
+          <span class="text-[11px] tracking-ultra uppercase text-champagne font-semibold">
+            The Living Atelier Advantage
+          </span>
+          <h2 class="font-serif text-4xl sm:text-5xl text-jade font-normal leading-tight">
+            Three Pillars of Architectural Assurance
+          </h2>
+        </div>
+        <p class="text-sm text-charcoal-muted max-w-md font-light leading-relaxed">
+          Uniting international building specification standards with Cambodia’s evolving architectural landscape.
+        </p>
+      </div>
+
+      <!-- 3-Column Architectural Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Pillar I -->
+        <div class="bg-limestone p-8 sm:p-10 rounded-sm border border-gold-hairline flex flex-col justify-between reveal-on-scroll">
+          <div class="space-y-5">
+            <div class="flex items-center justify-between">
+              <span class="font-serif text-3xl italic text-champagne">I.</span>
+              <span class="text-[10px] tracking-widest uppercase text-charcoal-muted">Authenticity</span>
+            </div>
+            <h3 class="font-serif text-2xl sm:text-3xl text-jade font-normal">
+              Official Provenance &amp; Authenticity
+            </h3>
+            <p class="text-sm text-charcoal-muted font-light leading-relaxed">
+              Every piece is procured directly through factory-authorized distributorship channels. We safeguard private owners and developers against counterfeit components, grey-market imports, and unverified hydraulic cartridges—backed by comprehensive manufacturer warranties.
+            </p>
+          </div>
+          <div class="pt-8 mt-8 border-t border-gold-hairline text-[11px] tracking-widest uppercase text-jade font-medium">
+            Zero Grey-Market Risk
+          </div>
+        </div>
+
+        <!-- Pillar II -->
+        <div class="bg-jade text-limestone p-8 sm:p-10 rounded-sm border border-champagne/40 flex flex-col justify-between shadow-lg reveal-on-scroll">
+          <div class="space-y-5">
+            <div class="flex items-center justify-between">
+              <span class="font-serif text-3xl italic text-champagne">II.</span>
+              <span class="text-[10px] tracking-widest uppercase text-champagne-light">Engineering</span>
+            </div>
+            <h3 class="font-serif text-2xl sm:text-3xl text-limestone font-normal">
+              Factory-Certified Technical Rigor
+            </h3>
+            <p class="text-sm text-limestone/85 font-light leading-relaxed">
+              Backed by a multi-decade track record across Southeast Asia’s commercial, hospitality, and luxury residential sectors. From concealed acoustic drainage and water pressure balancing to BIM/CAD submittal schedules, our technical counsel ensures effortless on-site installation.
+            </p>
+          </div>
+          <div class="pt-8 mt-8 border-t border-champagne/30 text-[11px] tracking-widest uppercase text-champagne-light font-medium">
+            Hospitality &amp; Residential Grade
+          </div>
+        </div>
+
+        <!-- Pillar III -->
+        <div class="bg-limestone p-8 sm:p-10 rounded-sm border border-gold-hairline flex flex-col justify-between reveal-on-scroll">
+          <div class="space-y-5">
+            <div class="flex items-center justify-between">
+              <span class="font-serif text-3xl italic text-champagne">III.</span>
+              <span class="text-[10px] tracking-widest uppercase text-charcoal-muted">Curation</span>
+            </div>
+            <h3 class="font-serif text-2xl sm:text-3xl text-jade font-normal">
+              Bespoke Trade &amp; Private Curation
+            </h3>
+            <p class="text-sm text-charcoal-muted font-light leading-relaxed">
+              Whether specifying a 200-key luxury resort or selecting PVD brushed bronze finishes for a private villa, our Phnom Penh consultants collaborate closely with architects, interior designers, and homeowners from concept moodboard through final commissioning.
+            </p>
+          </div>
+          <div class="pt-8 mt-8 border-t border-gold-hairline text-[11px] tracking-widest uppercase text-jade font-medium">
+            Dedicated Specification Desk
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 6. THE PHNOM PENH SHOWROOM & PRIVATE CONSULTATION BOOKING             -->
+  <!-- ===================================================================== -->
+  <section id="showroom" class="py-24 sm:py-32 bg-limestone">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14">
+      
+      <!-- Showroom Editorial Feature -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-24 reveal-on-scroll">
+        
+        <!-- Showroom Architectural Photography -->
+        <div class="lg:col-span-6">
+          <div class="relative rounded-sm overflow-hidden border border-gold-hairline shadow-lg aspect-[16/11] bg-jade">
+            <img 
+              src="Main-2-300-ppi-1024x747.png" 
+              alt="Architectural luxury desert sanctuary bathroom featuring a sculptural matte white freestanding pedestal bathtub, matching freestanding pedestal basin with brushed brass wall-mounted mixer, warm terracotta stone tiles, and panoramic floor-to-ceiling windows overlooking golden sand dunes" 
+              onerror="this.onerror=null;this.src='https://placehold.co/1200x825/EAE3D5/2C4235?text=Sculptural+Sanctuary+%26+Brushed+Brass';"
+              class="w-full h-full object-cover object-center transition-transform duration-1000 hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-b from-jade-dark/75 via-transparent to-transparent"></div>
+            <div class="absolute top-5 left-5 right-5 text-limestone">
+              <p class="text-[10px] tracking-ultra uppercase text-champagne-light mb-0.5">Architectural Serenity &bull; Sculptural Forms &amp; Brushed Brass</p>
+              <p class="font-serif text-lg italic leading-snug">
+                “Monolithic stone silhouettes paired with warm brushed brass in tranquil dialogue with the horizon.”
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Showroom Narrative -->
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-[11px] tracking-ultra uppercase text-champagne font-semibold">
+            The Phnom Penh Atelier
+          </span>
+          <h2 class="font-serif text-4xl sm:text-5xl text-jade font-normal leading-tight">
+            An Unhurried, Tactile Material Library
+          </h2>
+          <p class="text-sm sm:text-base text-charcoal-muted font-light leading-relaxed">
+            Located at the intersection of <strong class="font-medium text-charcoal">Preah Norodom Boulevard &amp; Street 306</strong> in Boeung Keng Kang 1, our showroom is conceived as a quiet architectural gallery rather than a conventional retail store.
+          </p>
+          <p class="text-sm sm:text-base text-charcoal-muted font-light leading-relaxed">
+            Experience live working shower systems, feel the cool velvety texture of Apaiser reclaimed Australian marble, compare Fima Carlo Frattini’s PVD metallic finishes against natural stone slabs, and review technical concealed framing with our specialists.
+          </p>
+
+          <div class="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-6 border-t border-gold-hairline">
+            <div>
+              <p class="text-[11px] tracking-widest uppercase text-champagne font-semibold mb-1">Address</p>
+              <p class="text-sm text-charcoal leading-relaxed">
+                Corner of Norodom Blvd &amp; St 306,<br />BKK1, Phnom Penh, Cambodia
+              </p>
+            </div>
+            <div>
+              <p class="text-[11px] tracking-widest uppercase text-champagne font-semibold mb-1">Atelier Hours</p>
+              <p class="text-sm text-charcoal leading-relaxed">
+                Monday – Saturday: 9:00 AM – 6:00 PM<br />Private Evening Viewings by Appointment
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Private Consultation Booking Card -->
+      <div id="consultation" class="scroll-mt-28 bg-limestone-warm/75 border border-champagne/45 rounded-sm p-8 sm:p-12 lg:p-16 shadow-sm reveal-on-scroll">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <!-- Left Form Guidance -->
+          <div class="lg:col-span-4 space-y-5">
+            <span class="text-[11px] tracking-ultra uppercase text-champagne font-semibold">
+              By Appointment
+            </span>
+            <h3 class="font-serif text-3xl sm:text-4xl text-jade font-normal leading-tight">
+              Arrange a Private Consultation
+            </h3>
+            <p class="text-sm text-charcoal-muted font-light leading-relaxed">
+              Share your project timeline, architectural drawings, or preferred houses. Our senior specification consultant will prepare finish samples ahead of your arrival.
+            </p>
+            <div class="pt-4 space-y-3 border-t border-gold-hairline text-xs text-charcoal-muted">
+              <p class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-jade"></span>
+                Complimentary finish sample board preparation
+              </p>
+              <p class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-jade"></span>
+                MEP &amp; concealed cistern technical review
+              </p>
+              <p class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-jade"></span>
+                Trade &amp; developer project pricing schedules
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Interactive Form -->
+          <div class="lg:col-span-8">
+            <form id="consultation-form" class="space-y-6" novalidate>
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Full Name -->
+                <div>
+                  <label for="client-name" class="block text-[11px] tracking-widest uppercase text-charcoal font-medium mb-2">
+                    Full Name <span class="text-champagne">*</span>
+                  </label>
+                  <input type="text" id="client-name" name="name" required placeholder="e.g. Sokha Vann / Elena Tan"
+                    class="w-full px-4 py-3.5 rounded-sm bg-limestone border border-gold-hairline text-sm text-charcoal placeholder:text-charcoal-muted/50 focus:outline-none focus:border-jade transition-colors" />
+                </div>
+
+                <!-- Contact Email or Phone -->
+                <div>
+                  <label for="client-contact" class="block text-[11px] tracking-widest uppercase text-charcoal font-medium mb-2">
+                    Email or Telegram / Phone <span class="text-champagne">*</span>
+                  </label>
+                  <input type="text" id="client-contact" name="contact" required placeholder="e.g. name@studio.com or +855 ..."
+                    class="w-full px-4 py-3.5 rounded-sm bg-limestone border border-gold-hairline text-sm text-charcoal placeholder:text-charcoal-muted/50 focus:outline-none focus:border-jade transition-colors" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Role Selection -->
+                <div>
+                  <label for="client-role" class="block text-[11px] tracking-widest uppercase text-charcoal font-medium mb-2">
+                    Your Role <span class="text-champagne">*</span>
+                  </label>
+                  <select id="client-role" name="role" required
+                    class="w-full px-4 py-3.5 rounded-sm bg-limestone border border-gold-hairline text-sm text-charcoal focus:outline-none focus:border-jade transition-colors">
+                    <option value="Homeowner">Private Homeowner</option>
+                    <option value="Architect">Architect</option>
+                    <option value="Interior Designer">Interior Designer</option>
+                    <option value="Developer">Property Developer / Hospitality</option>
+                  </select>
+                </div>
+
+                <!-- Preferred Date & Time -->
+                <div>
+                  <label for="client-datetime" class="block text-[11px] tracking-widest uppercase text-charcoal font-medium mb-2">
+                    Preferred Date &amp; Time
+                  </label>
+                  <input type="datetime-local" id="client-datetime" name="datetime"
+                    class="w-full px-4 py-3.5 rounded-sm bg-limestone border border-gold-hairline text-sm text-charcoal focus:outline-none focus:border-jade transition-colors" />
+                </div>
+              </div>
+
+              <!-- Brands of Interest Checkboxes -->
+              <div>
+                <span class="block text-[11px] tracking-widest uppercase text-charcoal font-medium mb-3">
+                  Official Houses of Interest
+                </span>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  <label class="flex items-center space-x-2.5 p-2.5 rounded-sm bg-limestone border border-gold-hairline hover:border-champagne cursor-pointer text-xs text-charcoal">
+                    <input type="checkbox" name="brands" value="Hansgrohe" class="accent-jade w-4 h-4 rounded-sm" />
+                    <span>Hansgrohe</span>
+                  </label>
+                  <label class="flex items-center space-x-2.5 p-2.5 rounded-sm bg-limestone border border-gold-hairline hover:border-champagne cursor-pointer text-xs text-charcoal">
+                    <input type="checkbox" name="brands" value="Duravit" class="accent-jade w-4 h-4 rounded-sm" />
+                    <span>Duravit</span>
+                  </label>
+                  <label class="flex items-center space-x-2.5 p-2.5 rounded-sm bg-limestone border border-gold-hairline hover:border-champagne cursor-pointer text-xs text-charcoal">
+                    <input type="checkbox" name="brands" value="Geberit" class="accent-jade w-4 h-4 rounded-sm" />
+                    <span>Geberit</span>
+                  </label>
+                  <label class="flex items-center space-x-2.5 p-2.5 rounded-sm bg-limestone border border-gold-hairline hover:border-champagne cursor-pointer text-xs text-charcoal">
+                    <input type="checkbox" name="brands" value="Fima Carlo Frattini" class="accent-jade w-4 h-4 rounded-sm" />
+                    <span>Fima Carlo Frattini</span>
+                  </label>
+                  <label class="flex items-center space-x-2.5 p-2.5 rounded-sm bg-limestone border border-gold-hairline hover:border-champagne cursor-pointer text-xs text-charcoal">
+                    <input type="checkbox" name="brands" value="Franke" class="accent-jade w-4 h-4 rounded-sm" />
+                    <span>Franke</span>
+                  </label>
+                  <label class="flex items-center space-x-2.5 p-2.5 rounded-sm bg-limestone border border-gold-hairline hover:border-champagne cursor-pointer text-xs text-charcoal">
+                    <input type="checkbox" name="brands" value="Elkay" class="accent-jade w-4 h-4 rounded-sm" />
+                    <span>Elkay</span>
+                  </label>
+                  <label class="flex items-center space-x-2.5 p-2.5 rounded-sm bg-limestone border border-gold-hairline hover:border-champagne cursor-pointer text-xs text-charcoal">
+                    <input type="checkbox" name="brands" value="Apaiser" class="accent-jade w-4 h-4 rounded-sm" />
+                    <span>Apaiser</span>
+                  </label>
+                  <label class="flex items-center space-x-2.5 p-2.5 rounded-sm bg-limestone border border-gold-hairline hover:border-champagne cursor-pointer text-xs text-charcoal">
+                    <input type="checkbox" name="brands" value="Full Specification" class="accent-jade w-4 h-4 rounded-sm" />
+                    <span>Full Suite</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Project Notes -->
+              <div>
+                <label for="client-notes" class="block text-[11px] tracking-widest uppercase text-charcoal font-medium mb-2">
+                  Project Notes &amp; Scope
+                </label>
+                <textarea id="client-notes" name="notes" rows="3" placeholder="Tell us about your residence, boutique hotel, or finish palette..."
+                  class="w-full px-4 py-3 rounded-sm bg-limestone border border-gold-hairline text-sm text-charcoal placeholder:text-charcoal-muted/50 focus:outline-none focus:border-jade transition-colors"></textarea>
+              </div>
+
+              <!-- Validation Error Message Box (No alert() used) -->
+              <div id="form-error" class="hidden p-4 rounded-sm bg-red-900/10 border border-red-800/30 text-xs text-red-900">
+                Please provide your name and preferred contact details so our atelier team can confirm your appointment.
+              </div>
+
+              <!-- Submit CTA -->
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
+                <span class="text-xs text-charcoal-muted font-light">
+                  Confidential consultation &bull; Response within 1 business day.
+                </span>
+                <button type="submit" class="px-8 py-4 rounded-sm bg-jade text-limestone hover:bg-jade-light transition-all duration-300 text-xs tracking-widest uppercase font-medium shadow-sm">
+                  Request Private Appointment
+                </button>
+              </div>
+            </form>
+
+            <!-- Confirmation Message Box (Displayed after submission) -->
+            <div id="form-confirmation" class="hidden bg-limestone border border-champagne p-8 sm:p-10 rounded-sm space-y-5">
+              <div class="inline-flex items-center space-x-2 text-jade">
+                <svg class="w-5 h-5 text-champagne" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                <span class="text-[11px] tracking-ultra uppercase font-semibold">Appointment Request Received</span>
+              </div>
+              <h4 class="font-serif text-3xl text-jade">
+                We Look Forward to Welcoming You, <span id="confirm-name" class="italic"></span>.
+              </h4>
+              <p class="text-sm text-charcoal-muted font-light leading-relaxed">
+                Our senior specification consultant at the <strong class="text-charcoal font-medium">Norodom Blvd &amp; St 306 Atelier</strong> has received your request (<span id="confirm-summary" class="text-jade font-medium"></span>) and will reach out shortly to confirm your private viewing and prepare relevant material samples.
+              </p>
+              <div class="pt-2">
+                <button id="reset-form-btn" type="button" class="px-6 py-2.5 rounded-sm border border-gold-hairline text-xs tracking-widest uppercase text-jade hover:border-champagne transition-colors">
+                  Submit Another Inquiry
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 7. REFINED ARCHITECTURAL FOOTER                                       -->
+  <!-- ===================================================================== -->
+  <footer class="bg-jade-dark text-limestone pt-20 pb-12 border-t border-champagne/30">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-champagne/20">
+        
+        <!-- Brand Identity (4 Cols) -->
+        <div class="lg:col-span-4 space-y-4">
+          <div>
+            <span class="font-serif text-2xl tracking-[0.2em] text-limestone block">
+              LIVING ATELIER
+            </span>
+            <span class="text-[10px] tracking-ultra uppercase text-champagne block mt-1">
+              livingatelier.asia
+            </span>
+          </div>
+          <p class="text-sm text-limestone/75 font-light leading-relaxed max-w-sm">
+            Cambodia’s premier architectural bath and kitchen gallery. Authorized distributor of iconic European, American, and Australian sanitaryware, backed by decades of regional specification expertise.
+          </p>
+          <div class="pt-2">
+            <a href="#consultation" class="inline-flex items-center space-x-2 text-xs tracking-widest uppercase text-champagne-light hover:text-white transition-colors">
+              <span>Request Architectural Specification Dossier</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Official Brand Roster (4 Cols) -->
+        <div class="lg:col-span-4 space-y-4">
+          <h4 class="text-[11px] tracking-ultra uppercase text-champagne font-semibold">
+            Official Partner Houses
+          </h4>
+          <ul class="grid grid-cols-2 gap-y-2.5 gap-x-4 text-sm text-limestone/80 font-light">
+            <li><a href="#brands" class="hover:text-champagne-light transition-colors">Hansgrohe (Germany)</a></li>
+            <li><a href="#brands" class="hover:text-champagne-light transition-colors">Duravit (Germany)</a></li>
+            <li><a href="#brands" class="hover:text-champagne-light transition-colors">Geberit (Switzerland)</a></li>
+            <li><a href="#brands" class="hover:text-champagne-light transition-colors">Fima Carlo Frattini (Italy)</a></li>
+            <li><a href="#brands" class="hover:text-champagne-light transition-colors">Franke (Switzerland)</a></li>
+            <li><a href="#brands" class="hover:text-champagne-light transition-colors">Elkay (USA)</a></li>
+            <li class="col-span-2"><a href="#brands" class="hover:text-champagne-light transition-colors">Apaiser Bathware (Australia)</a></li>
+          </ul>
+        </div>
+
+        <!-- Phnom Penh Showroom Contact (4 Cols) -->
+        <div class="lg:col-span-4 space-y-4">
+          <h4 class="text-[11px] tracking-ultra uppercase text-champagne font-semibold">
+            Phnom Penh Showroom
+          </h4>
+          <p class="text-sm text-limestone/80 font-light leading-relaxed">
+            Corner of Preah Norodom Blvd &amp; Street 306,<br />
+            Boeung Keng Kang 1 (BKK1),<br />
+            Phnom Penh, Kingdom of Cambodia
+          </p>
+          <p class="text-xs text-limestone/70 font-light">
+            Concierge: <a href="mailto:concierge@livingatelier.asia" class="text-champagne-light hover:underline">concierge@livingatelier.asia</a>
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-limestone/60 font-light">
+        <p>&copy; <span id="current-year"></span> Living Atelier (livingatelier.asia). All Rights Reserved.</p>
+        <p>Official Authorized Distributor &bull; Phnom Penh, Kingdom of Cambodia</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================================================================== -->
+  <!-- INTERACTIVE JAVASCRIPT: BRAND PORTFOLIO, MODAL, FORM & SCROLL REVEAL  -->
+  <!-- ===================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Set current year in footer
+      const yearEl = document.getElementById('current-year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      // -------------------------------------------------------------------
+      // 1. Official Brand Portfolio Data (All 7 Required Houses)
+      // -------------------------------------------------------------------
+      const brandsData = [
+        {
+          id: 'hansgrohe',
+          name: 'Hansgrohe',
+          origin: 'Schiltach, Germany',
+          category: 'brassware',
+          tagline: 'Precision brassware & experiential shower systems',
+          description: 'Founded in the Black Forest in 1901, Hansgrohe defines ergonomic water engineering—combining PowderRain micro-droplet acoustics, intuitive Select valve technology, and enduring FinishPlus PVD surfaces.',
+          collections: ['AXOR & Hansgrohe Raindance', 'Metropol & Talis E Mixers', 'Pulsify & PowderRain Showers', 'iBox Universal Concealed Systems'],
+          specs: ['German precision ceramic cartridges', 'EcoSmart water-saving flow regulators', 'PVD Brushed Bronze, Black Chrome & Gold Optic']
+        },
+        {
+          id: 'duravit',
+          name: 'Duravit',
+          origin: 'Hornberg, Germany',
+          category: 'ceramics',
+          tagline: 'Architectural ceramics & designer wellness',
+          description: 'Collaborating with Philippe Starck, Cecilie Manz, and Sieger Design, Duravit crafts sculptural DuraCeram® washbasins, rimless HygieneFlush toilets, and monolithic architectural bathtubs.',
+          collections: ['White Tulip by Philippe Starck', 'Luv by Cecilie Manz', 'DuraSquare & Vero Air', 'SensoWash® Integrated Shower-Toilets'],
+          specs: ['Ultra-thin DuraCeram® precision rims', 'HygieneGlaze® antibacterial ceramic firing', 'Bespoke furniture vanity integration']
+        },
+        {
+          id: 'geberit',
+          name: 'Geberit',
+          origin: 'Rapperswil-Jona, Switzerland',
+          category: 'engineering',
+          tagline: 'Concealed cisterns & Swiss sanitary engineering',
+          description: 'The unseen backbone of refined architecture. Geberit’s Swiss-engineered Duofix concealed frames, Sigma actuator plates, and Silent-db20 acoustic piping ensure whisper-quiet reliability behind every wall.',
+          collections: ['Sigma70 & Sigma50 Architectural Plates', 'Duofix Concealed Installation Frames', 'CleanLine Walk-In Shower Channels', 'AquaClean Mera Comfort Systems'],
+          specs: ['50-year spare parts availability guarantee', 'Acoustic decoupling for luxury hospitality', 'Custom glass, slate & brushed metal flush plates']
+        },
+        {
+          id: 'fima',
+          name: 'Fima Carlo Frattini',
+          origin: 'Briga Novarese, Italy',
+          category: 'brassware',
+          tagline: 'Avant-garde Italian brassware & brushed finishes',
+          description: '100% Made in Italy with zero-emission solar production, Fima Carlo Frattini elevates mixers into tactile sculptures with knurled textures, architectural spouts, and rich galvanic finishes.',
+          collections: ['SO & Spillo Tech', 'Mast & Eclipse Architectural Mixers', 'Fima Wellness Modular Showering', 'Melange & Heritage Classics'],
+          specs: ['19 bespoke Italian galvanic & PVD finishes', 'Lead-free solid brass machining', 'Customizable handle knurling & textures']
+        },
+        {
+          id: 'franke',
+          name: 'Franke',
+          origin: 'Aarburg, Switzerland',
+          category: 'kitchen',
+          tagline: 'Bespoke kitchen systems & culinary engineering',
+          description: 'Swiss precision tailored for contemporary culinary spaces. Franke integrates seamless stainless steel and Fragranite workstation sinks, boiling/chilled filtration taps, and flush extraction.',
+          collections: ['Mythos Masterpiece Collection', 'Maris Fragranite Sinks', 'Vital Capsule Filtration Mixers', 'Box Center Integrated Workstations'],
+          specs: ['Surgical-grade AISI 304 stainless steel', 'Sanitized® silver-ion Fragranite durability', 'Flush-mount & undermount architectural profiles']
+        },
+        {
+          id: 'elkay',
+          name: 'Elkay',
+          origin: 'Illinois, United States',
+          category: 'kitchen',
+          tagline: 'Commercial & residential stainless architectural sinks & hydration',
+          description: 'Renowned across North America and Asia for heavy-gauge handcrafted stainless steel sinks, butler prep stations, and architectural ezH2O bottle-filling hydration systems.',
+          collections: ['Crosstown® Handcrafted 16-Gauge Sinks', 'Lustertone® Architectural Undermounts', 'ezH2O® Architectural Hydration Stations', 'Quartz Classic Composite Sinks'],
+          specs: ['Heavy-duty 16- and 18-gauge Type 304 steel', 'SoundGuard® acoustic undercoating pads', 'Tight zero-radius & micro-radius corners']
+        },
+        {
+          id: 'apaiser',
+          name: 'Apaiser',
+          origin: 'Melbourne, Australia',
+          category: 'ceramics',
+          tagline: 'Hand-crafted reclaimed marble bathware & sculptural stone',
+          description: 'Born in Australia and favored by the world’s most iconic resorts, Apaiser blends reclaimed sustainably sourced marble with organic minerals—hand-finished into warm, velvety stone baths and basins.',
+          collections: ['Haven & Sublime Freestanding Baths', 'Oman & Sampan Sculptural Basins', 'Bespoke Resort & Villa Commissions', '18 Signature Earth & Mineral Palettes'],
+          specs: ['Up to 90% reclaimed marble stone composition', 'Warm, non-porous, velvet-matte tactile finish', 'Bespoke color-matching & architectural sizing']
+        }
+      ];
+
+      const brandsGrid = document.getElementById('brands-grid');
+      const filterButtons = document.querySelectorAll('.brand-filter-btn');
+
+      // Render brand cards
+      function renderBrands(filter = 'all') {
+        if (!brandsGrid) return;
+        const filtered = filter === 'all'
+          ? brandsData
+          : brandsData.filter(b => b.category === filter);
+
+        brandsGrid.innerHTML = filtered.map((brand, index) => `
+          <article 
+            data-brand-id="${brand.id}"
+            class="brand-card group cursor-pointer bg-limestone-warm/45 hover:bg-white border border-gold-hairline hover:border-champagne rounded-sm p-8 flex flex-col justify-between transition-all duration-500 hover:shadow-md"
+          >
+            <div class="space-y-4">
+              <div class="flex items-center justify-between text-[10px] tracking-ultra uppercase text-champagne font-semibold">
+                <span>0${index + 1} &bull; ${brand.origin}</span>
+                <span class="px-2 py-0.5 rounded-sm bg-jade/10 text-jade text-[9px]">Official</span>
+              </div>
+
+              <h3 class="font-serif text-3xl text-jade group-hover:text-charcoal transition-colors">
+                ${brand.name}
+              </h3>
+
+              <p class="text-xs tracking-wider uppercase text-charcoal font-medium">
+                ${brand.tagline}
+              </p>
+
+              <p class="text-sm text-charcoal-muted font-light leading-relaxed line-clamp-3">
+                ${brand.description}
+              </p>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-gold-hairline flex items-center justify-between">
+              <span class="text-[11px] tracking-widest uppercase text-jade font-medium group-hover:text-champagne transition-colors">
+                Inspect Collections
+              </span>
+              <svg class="w-4 h-4 text-champagne transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+              </svg>
+            </div>
+          </article>
+        `).join('');
+
+        // Attach click listeners to open specification modal
+        document.querySelectorAll('.brand-card').forEach(card => {
+          card.addEventListener('click', () => {
+            const brandId = card.getAttribute('data-brand-id');
+            openBrandModal(brandId);
+          });
+        });
+      }
+
+      // Initialize all 7 brands
+      renderBrands('all');
+
+      // Filter tab interaction
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterButtons.forEach(b => {
+            b.classList.remove('bg-jade', 'text-limestone', 'border-jade');
+            b.classList.add('bg-limestone-warm/60', 'text-charcoal', 'border-gold-hairline');
+          });
+          btn.classList.remove('bg-limestone-warm/60', 'text-charcoal', 'border-gold-hairline');
+          btn.classList.add('bg-jade', 'text-limestone', 'border-jade');
+
+          renderBrands(btn.getAttribute('data-filter'));
+        });
+      });
+
+      // -------------------------------------------------------------------
+      // 2. Brand Specification Modal Logic
+      // -------------------------------------------------------------------
+      const modal = document.getElementById('brand-modal');
+      const closeModalBtn = document.getElementById('close-brand-modal');
+      const modalInquireBtn = document.getElementById('modal-inquire-btn');
+      let currentSelectedBrand = '';
+
+      function openBrandModal(brandId) {
+        const brand = brandsData.find(b => b.id === brandId);
+        if (!brand || !modal) return;
+
+        currentSelectedBrand = brand.name;
+        document.getElementById('modal-brand-origin').textContent = `${brand.origin} — Official Distributor`;
+        document.getElementById('modal-brand-title').textContent = brand.name;
+        document.getElementById('modal-brand-desc').textContent = brand.description;
+
+        document.getElementById('modal-brand-collections').innerHTML = brand.collections
+          .map(item => `<li class="flex items-start gap-2"><span class="text-champagne mt-1">&bull;</span><span>${item}</span></li>`)
+          .join('');
+
+        document.getElementById('modal-brand-specs').innerHTML = brand.specs
+          .map(spec => `<li class="flex items-start gap-2"><span class="text-jade mt-1">&#10003;</span><span>${spec}</span></li>`)
+          .join('');
+
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeBrandModal() {
+        if (!modal) return;
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+      }
+
+      if (closeModalBtn) closeModalBtn.addEventListener('click', closeBrandModal);
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) closeBrandModal();
+        });
+      }
+
+      // Pre-check the selected brand in consultation form when clicking "Specify This Brand"
+      if (modalInquireBtn) {
+        modalInquireBtn.addEventListener('click', () => {
+          if (currentSelectedBrand) {
+            const checkbox = document.querySelector(`input[name="brands"][value="${currentSelectedBrand}"]`);
+            if (checkbox) checkbox.checked = true;
+          }
+          closeBrandModal();
+        });
+      }
+
+      // -------------------------------------------------------------------
+      // 3. Always-Collapsed Architectural Slide-Over Drawer Toggle
+      // -------------------------------------------------------------------
+      const menuDrawerBtn = document.getElementById('menu-drawer-btn');
+      const closeDrawerBtn = document.getElementById('close-drawer-btn');
+      const architecturalDrawer = document.getElementById('architectural-drawer');
+      const drawerBackdrop = document.getElementById('drawer-backdrop');
+
+      function openDrawer() {
+        if (!architecturalDrawer || !drawerBackdrop) return;
+        drawerBackdrop.classList.remove('hidden');
+        // Force reflow for smooth opacity transition
+        void drawerBackdrop.offsetWidth;
+        drawerBackdrop.classList.remove('opacity-0');
+        architecturalDrawer.classList.remove('translate-x-full');
+        if (menuDrawerBtn) menuDrawerBtn.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeDrawer() {
+        if (!architecturalDrawer || !drawerBackdrop) return;
+        architecturalDrawer.classList.add('translate-x-full');
+        drawerBackdrop.classList.add('opacity-0');
+        if (menuDrawerBtn) menuDrawerBtn.setAttribute('aria-expanded', 'false');
+        setTimeout(() => {
+          drawerBackdrop.classList.add('hidden');
+          // Keep body locked only if brand modal is open
+          if (!modal || modal.classList.contains('hidden')) {
+            document.body.style.overflow = '';
+          }
+        }, 450);
+      }
+
+      if (menuDrawerBtn) menuDrawerBtn.addEventListener('click', openDrawer);
+      if (closeDrawerBtn) closeDrawerBtn.addEventListener('click', closeDrawer);
+      if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeDrawer);
+
+      document.querySelectorAll('.drawer-link').forEach(link => {
+        link.addEventListener('click', closeDrawer);
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          if (modal && !modal.classList.contains('hidden')) {
+            closeBrandModal();
+          }
+          if (architecturalDrawer && !architecturalDrawer.classList.contains('translate-x-full')) {
+            closeDrawer();
+          }
+        }
+      });
+
+      // -------------------------------------------------------------------
+      // 4. Private Consultation Form Submission & Confirmation Feedback
+      // -------------------------------------------------------------------
+      const form = document.getElementById('consultation-form');
+      const formError = document.getElementById('form-error');
+      const formConfirmation = document.getElementById('form-confirmation');
+      const resetFormBtn = document.getElementById('reset-form-btn');
+
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const nameInput = document.getElementById('client-name').value.trim();
+          const contactInput = document.getElementById('client-contact').value.trim();
+          const roleInput = document.getElementById('client-role').value;
+
+          if (!nameInput || !contactInput) {
+            formError.classList.remove('hidden');
+            return;
+          }
+
+          formError.classList.add('hidden');
+
+          const selectedBrands = Array.from(document.querySelectorAll('input[name="brands"]:checked'))
+            .map(cb => cb.value);
+
+          const brandSummary = selectedBrands.length > 0
+            ? `${roleInput} • ${selectedBrands.join(', ')}`
+            : `${roleInput} Consultation`;
+
+          document.getElementById('confirm-name').textContent = nameInput;
+          document.getElementById('confirm-summary').textContent = brandSummary;
+
+          form.classList.add('hidden');
+          formConfirmation.classList.remove('hidden');
+        });
+      }
+
+      if (resetFormBtn) {
+        resetFormBtn.addEventListener('click', () => {
+          form.reset();
+          formConfirmation.classList.add('hidden');
+          form.classList.remove('hidden');
+        });
+      }
+
+      // -------------------------------------------------------------------
+      // 5. Subtle IntersectionObserver Scroll Animations
+      // -------------------------------------------------------------------
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
