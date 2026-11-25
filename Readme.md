@@ -2,7 +2,7 @@
 
 **Living Atelier** (`livingatelier.asia`) is Cambodia’s premier architectural destination for luxury European sanitaryware, bespoke bathroom fixtures, and contemporary kitchen solutions. Located in the heart of Phnom Penh, our 3,000+ sq. ft. flagship showroom curates world-renowned European design for discerning homeowners, architects, interior designers, and luxury property developers across Cambodia.
 
-Backed by **Econflo Systems Singapore**, Living Atelier brings over two decades of regional project specification expertise, technical engineering support, and authentic manufacturer warranties directly to the Cambodian market.
+Living Atelier brings over two decades of regional project specification expertise, technical engineering support, and authentic manufacturer warranties directly to the Cambodian market.
 
 ---
 
@@ -24,7 +24,7 @@ Living Atelier is an authorized distributor and showroom partner for leading Eur
 
 * **Architectural & Interior Design Specification:** End-to-end technical consultation, BIM/CAD documentation, and finish curation for luxury villas, penthouses, boutique hotels, and commercial developments.
 * **Private Showroom Consultations:** Unhurried, tactile browsing experience featuring live working displays and curated material palettes.
-* **Regional Supply Chain & Warranty Assurance:** Direct procurement backed by Econflo Systems’ established Southeast Asian distribution network.
+* **Regional Supply Chain & Warranty Assurance:** Direct procurement backed by established Southeast Asian distribution network.
 
 ---
 
@@ -32,13 +32,36 @@ Living Atelier is an authorized distributor and showroom partner for leading Eur
 
 * **Location:** Corner of Norodom Blvd & Street 306, Boeung Keng Kang 1 (BKK1), Phnom Penh, Cambodia
 * **Website:** [https://livingatelier.asia](https://livingatelier.asia)
-* **Parent Company:** [Econflo Systems Pte Ltd](https://econflo.com) (Singapore & Cambodia)
 
----
-
-## Repository Overview
-
-This repository houses the web source code and digital assets for `livingatelier.asia`.
 
 * **Design Aesthetic:** Tropical modernism meets understated European luxury (featuring a palette of warm stone neutrals, jade/olive accents, and brushed metallic finishes).
 * **Target Audience:** Luxury residential homeowners, architects, interior designers, and hospitality developers in Phnom Penh, Siem Reap, and Sihanoukville.
+* ## Frequently Asked Questions
+
+### Where is the Living Atelier showroom in Phnom Penh?
+The showroom is located at the corner of Norodom Boulevard and Street 306 in BKK1 (Sangkat BKK1, Khan Chamkarmon).
+
+### What brands does Living Atelier carry?
+Living Atelier carries Hansgrohe, Duravit, Geberit, Franke, Fima Carlo Frattini, Elkay, and other premium kitchen and bathroom brands.
+
+### Do you work with architects and developers?
+Yes. We support homeowners as well as architects, interior designers, property developers, and contractors on projects of any size.
+
+### Is Living Atelier related to Econflo Systems?
+Yes. Living Atelier is the Phnom Penh showroom of Econflo Systems, a Singapore-based company with over 40 years of experience in premium bathroom and kitchen solutions.
+
+### How do I make an appointment?
+Call or WhatsApp +855 81 233 886, or visit the website at livingatelier.asia.
+
+## About Living Atelier
+
+Every exceptional space begins with a clear vision. At Living Atelier we bring that vision to life through carefully selected premium bathroom and kitchen solutions. Our showroom lets you experience materials, finishes, and products in context so you can make confident decisions for your home or project.
+
+Founded in 2026 and officially opened with the presence of Singapore’s Ambassador to Cambodia, Living Atelier extends long-standing commitment to quality European design into Cambodia.
+
+---
+
+**Living Atelier** — Luxury Kitchen & Bath in Phnom Penh  
+[Website](https://livingatelier.asia/) · [WhatsApp](https://wa.me/85581233886) · Norodom Blvd × St 306, BKK1
+
+*Keywords: Living Atelier Phnom Penh, luxury kitchen Cambodia, premium bathroom fittings Phnom Penh, Hansgrohe showroom Phnom Penh, Duravit Cambodia, Geberit Phnom Penh, designer kitchen and bath BKK1*
